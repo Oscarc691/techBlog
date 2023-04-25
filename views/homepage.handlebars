@@ -1,0 +1,33 @@
+{{!-- loop over each object in post array --}}
+
+{{#each post as |post| }}
+
+
+<div>
+    <h2>
+        <a href="/post/{{post.id}}">{{post.title}}</a>
+    </h2>
+    <h3>
+        Created by {{post.user.username}}
+    </h3>
+    <p>
+        {{post.content}}
+    </p>
+
+    {{!-- display comments --}}
+    {{#each post.comments as |comment|}}
+    <div>
+        <h4>
+            {{comment.user.username}}
+        </h4>
+        <p>
+            {{comment.content}}
+        </p>
+
+        {{/each}}
+
+</div>
+
+{{/each}}
+
+{{!-- end of loop --}}

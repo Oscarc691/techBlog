@@ -1,0 +1,33 @@
+[
+    {
+        "username": "David",
+        "email": "DavidDontKnow02@gmail.com",
+        "password": "David123"
+    },
+    {
+        "username": "Andreena",
+        "email": "Andreena@gmail.com",
+        "password": "Andreena123"
+    },  
+    {
+        "username": "Addie",
+        "email": "Addie@gmail.com",
+        "password": "Addie123"
+    },
+    {
+        "username": "Saul",
+        "email": "saul@gmail.com",
+        "password":"Saul123"
+    },
+    {
+        "username": "Nate",
+        "email": "nate@gmail.com",
+        "password": "Nate123"
+    }, 
+    {
+        "username": "Jordan",
+        "email": "jordan@gmail.com",
+        "password": "Addie123"
+    }
+
+]

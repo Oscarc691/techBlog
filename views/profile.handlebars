@@ -1,0 +1,62 @@
+<div>
+    <h2>
+        Welcome {{user.username}}
+    </h2>
+</div>
+
+<div>
+    <div>
+        <h2> 
+            Create a Post
+        </h2>
+
+        <form>
+            <div class="form-group">
+                <label for="title">Title:</label>
+                <input type="text" class="form-control" id="title" placeholder="Enter title">
+            </div>
+            <div class="form-group">
+                <label for="content">Content:</label>
+                <input type="text" class="form-control" id="content" placeholder="Enter content">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+
+    <h2>
+        Your Posts
+    </h2>
+    {{!-- loop over each object in post array --}}
+    {{#each post as |post| }}
+    <div>
+        <h2>
+            <a href="/post/{{post.id}}">{{post.title}}</a>
+        </h2>
+        <h3>
+            Created by {{post.user.username}}
+        </h3>
+        <p>
+            {{post.content}}
+        </p>
+        {{!-- display comments --}}
+        {{#each post.comments as |comment|}}
+        <div>
+            <h4>
+                {{comment.user.username}}
+            </h4>
+            <p>
+                {{comment.content}}
+            </p>
+        </div>
+        {{/each}}
+    </div>
+    <button data-id="{{post.id}}" class="delete-post">Delete Post</button>
+    {{/each}}
+    {{!-- end of loop --}}
+    {{/each}}
+    {{!-- end of loop --}}
+</div>
+
+<script src="/js/profile.js"></script>
+

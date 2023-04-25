@@ -1,13 +1,19 @@
-const sequelize = require("../config/connection");
-const User = require("./User");
-const Article = require("./Article");
+const User = require('./User');
+const Post = require('./Post');
+const Comment = require('./Comment');
 
-Article.belongsTo(User, {
-  foreignkey: "name",
+User.hasMany(Post, {
+    foreignKey: 'user_id',
+    onDelete: 'CASCADE'
 });
 
-User.hasMany(Article, {
-  foreignkey: "article_id",
+Post.belongsTo(User, {
+    foreignKey: 'user_id'
 });
 
-module.exports = { Article, User };
+Comment.belongsTo(User, {
+    foreignKey: 'user_id',
+    onDelete: 'CASCADE'
+});
+
+module.exports = { User, Post, Comment }
