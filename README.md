@@ -1,4 +1,4 @@
-# Blog Monster: Tech Blog Application
+# TechBlog: Tech Blog Application
 Link to Github Repo: 
 ```
 https://github.com/oscarc691/techBlog
