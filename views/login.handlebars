@@ -1,24 +1,19 @@
-<h2>
-    login
-</h2>
-
-{{!-- login form  that takes in a username email and password--}}
-
-<form>
-    <div class="form-group">
-        <label for="email">email:</label>
-        <input type="text" class="form-control" id="email" placeholder="Enter email">
+<div class="card">
+    <div class="card-header">
+        <h2>Login</h2>
     </div>
-    <div class="form-group">
-        <label for="password">Password:</label>
-        <input type="password" class="form-control" id="password" placeholder="Enter password">
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-    
-    {{!-- end of login form --}}
-    
-    {{!-- script to handle login form submission --}}
-    <script src="/js/login.js"></script>
-    {{!-- end of script to handle login form submission --}}
+    <form id="login-form" class="card-body">
+        <div>
+            <label for="username-input-login">Username</label>
+            <input type="text" id="username-input-login" />
+        </div>
+        <div>
+            <label for="password-input-login" class="form-label">Password</label>
+            <input type="password" id="password-input-login" />
+        </div>
+        <button type="submit" id="login-btn" class="btn">Login</button>
+        <a type="button" href="/signup">Create an account!</a>
+    </form>
+</div>
 
+<script src="/js/login.js"></script>
